@@ -1,0 +1,62 @@
+#btnstatus
+{
+    float:right;
+    border:none;
+    background-color: transparent;
+}
+li
+{
+    text-indent: -5px;
+}
+.zwijany
+        {
+            padding-left:30px;
+        }
+::marker
+{
+    margin-right:3px;
+}
+.rozwinGuzik
+{
+    cursor:pointer;
+    border:1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    background-color: rgb(250, 250, 250);
+    color:rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    width:25px;
+}
+#uldrzewo
+{
+    padding:0;
+    width:50%;
+    margin-left: 25%;
+}
+.treeBranch
+{
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding:5px 5px 5px 10px;
+    margin-bottom: 2px;
+    //width:500px;
+}
+.MainBranch
+{
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+@media(max-width: 1000px) {
+    #uldrzewo {
+      margin-left:0;
+      width:100%;
+    }
+  }
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
