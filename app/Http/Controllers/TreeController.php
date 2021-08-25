@@ -18,7 +18,9 @@ class TreeController extends Controller
     {
         $categories = Category::with('relationsAsChild')->orderBy('id', 'asc')->get();
         $allCategories = Category::select('id', 'name')->get();
-        if (!empty($categories)) {
+        $any=count($categories);
+        if($any!=0)
+        {
             $categoriesAll = array();
             foreach ($allCategories as $cat) {
                 $categoriesAll[$cat->id] = $cat->name;
@@ -31,7 +33,9 @@ class TreeController extends Controller
                 $wynik[$category->id] = ['path' => $tmp, 'name' => $category->name, 'id' => $category->id, 'level' => substr_count($tmp, '/') - 1];
             }
             asort($wynik);
-        } else {
+        } 
+        else 
+        {
             $wynik = 'empty';
         }
         return view('tree')->with(compact('wynik', 'categories'));
